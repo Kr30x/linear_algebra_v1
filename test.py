@@ -1,11 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
-from pages import MatrixCalculator, FindBasis
-
-
 class MatrixCalculatorApp:
-
     def __init__(self, root):
         self.root = root
         self.root.title("Matrix Calculator")
@@ -27,18 +23,18 @@ class MatrixCalculatorApp:
         self.notebook.add(self.find_basis_frame, text="Find Basis")
         self.create_find_basis_page(self.find_basis_frame)
 
-    def create_matrix_calculator_page(self, page):
-        MatrixCalculator.Page(page)
+    def create_matrix_calculator_page(self, frame):
+        # Add Matrix Calculator widgets to the frame
+        pass
 
-    def create_find_basis_page(self, page):
-        FindBasis.Page(page)
-
+    def create_find_basis_page(self, frame):
+        # Add Find Basis widgets to the frame
+        pass
 
 def main():
     root = tk.Tk()
     app = MatrixCalculatorApp(root)
     root.mainloop()
-
 
 if __name__ == "__main__":
     main()
